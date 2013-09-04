@@ -116,6 +116,8 @@ $pdf->Image($image, '', '', 80, 40, '', '', 'T', false, 300, '', false, false, /
 $X = 0; 
 $Y = 50; 
 
+$pages = $pdf->getNumPages(); 
+
 foreach ($arr as $key => $value) {
 	if (  $key % 2 ) {
 //		$X = 1;	
@@ -126,7 +128,26 @@ foreach ($arr as $key => $value) {
 		$Y += 40; 
 	} else {
 //		echo "key $key ($X,$Y)"; 
+
+
+		$pdf->startTransaction();
+
 		draw_image($pdf, $X, $Y, $value);
+
+
+		if($pages != $pdf->getNumPages()){
+			$pdf = $pdf->rollbackTransaction();
+			$Y = 0;
+
+			$pdf->AddPage(); 
+			$pages = $pdf->getNumPages(); 
+
+			draw_image($pdf, $X, $Y, $value); 
+		} else {
+			$pdf->commitTransaction();
+		}
+
+
 	}
 //			echo "<br>"; 
 
