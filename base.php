@@ -79,12 +79,13 @@ $pdf->writeHTMLCell(0, 0, '', '', '<hr color="red">' , 0, 1, 0, true, '', true);
 $pdf->SetXY(0, 40);
 $pdf->SetFont('trebuchetmsi', '', 16, '', true);
 $pdf->SetTextColor(245,64,0);
-$pdf->writeHTMLCell(0, 0, '', '', '<div style="text-align:center">HELLO</div>' , 0, 1, 0, true, '', true);
+$pdf->writeHTMLCell(0, 0, '', '', '<div style="text-align:center">HELLO<img src="logo.jpg"></div>' , 0, 1, 0, true, '', true);
 
 
-$arr = array('logo.jpg','logo.jpg','logo.jpg', 'logo.jpg',
- 'logo.jpg', 'logo.jpg', 'logo.jpg', 'logo.jpg', 'logo.jpg', 'logo.jpg'
- , 'logo.jpg', 'logo.jpg', 'logo.jpg', 'logo.jpg', 'logo.jpg', 'logo.jpg');
+
+$arr = array('house.jpg','house.jpg','house.jpg', 'house.jpg',
+ 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg'
+ , 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg');
 
 //print_r($arr); 
 
@@ -109,12 +110,12 @@ foreach ($arr as $key => $value) {
 function draw_image($pdf, $x, $y, $image){
 
 $pdf->SetXY($x, $y);
-$pdf->Image($image, '', '', 80, 40, '', '', 'T', false, 300, '', false, false, /* Border */ false, false, false, false);
+$pdf->Image($image, '', '', 90, 65, '', '', 'T', false, 300, '', false, false, /* Border */ false, false, false, false);
 
 }
 
-$X = 0; 
-$Y = 50; 
+$X = 10; 
+$Y = intval( $pdf->getY() ) + 1; 
 
 $pages = $pdf->getNumPages(); 
 
@@ -123,9 +124,9 @@ foreach ($arr as $key => $value) {
 //		$X = 1;	
 //		echo "key $key ($X,$Y)"; 
 //		$Y += 1; 
-		$X = 80;
+		$X += 90;
 		draw_image($pdf, $X, $Y, $value); 
-		$Y += 40; 
+		$Y += 65; 
 	} else {
 //		echo "key $key ($X,$Y)"; 
 
@@ -151,7 +152,7 @@ foreach ($arr as $key => $value) {
 	}
 //			echo "<br>"; 
 
-	$X = 0; 
+	$X = 10; 
 }
 
 $pdf->Output('somefile.pdf', 'I');
