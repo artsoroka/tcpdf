@@ -1,5 +1,7 @@
 <?php 
 
+require 'lib/tcpdf.php'; 
+
 class Template extends TCPDF {
 	public function construct(){
 
@@ -23,13 +25,15 @@ class Template extends TCPDF {
 }
 
 class Data {
-
+	public $imageArray = array('house.jpg', 'house.jpg', 'house.jpg', 
+	'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg','house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg'); 
 }
 
 class Wrapper {
 	
-	public function __construct(Template $template){
+	public function __construct(Template $template, Data $data){
 		$this->tcpdf = $template;   
+		$this->imagesArray = $data->imageArray; 
 	}
 
 	public function render(){
@@ -97,3 +101,7 @@ class Wrapper {
 
 }
 
+$template = new Template; 
+$data 	= new Data; 
+$wrapper = new Wrapper($template, $data);  
+$wrapper->render(); 

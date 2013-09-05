@@ -2,12 +2,16 @@
 //error_reporting(false); 
 require_once('lib/tcpdf.php');
 
-class Wrapper {
+interface IPDF_Template{
+	public function driver(); 
+}
 
-	public $imagesArray = array(); 
+class PDF_Template implements IPDF_Template{
+	
+	protected $tcpdf; 
 
 	public function __construct(){
-		
+
 		$this->tcpdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 		$this->tcpdf->SetCreator(PDF_CREATOR);
@@ -23,7 +27,20 @@ class Wrapper {
 		$this->tcpdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 		$this->tcpdf->SetFont('trebuchetmsi', 'BI', 20);
 		$this->tcpdf->AddPage();
+	}
 
+	public function driver(){
+		return $this->tcpdf; 
+	}
+
+}
+
+class Wrapper {
+
+	public $imagesArray = array(); 
+
+	public function __construct(IPDF_Template $template){
+		$this->tcpdf = $template->driver(); 
 	}
 
 	public function __destruct(){
@@ -97,8 +114,9 @@ class Wrapper {
 	}
 
 }
+$template = new PDF_Template; 
 
-$doc = new Wrapper; 
+$doc = new Wrapper($template);  
 
 $doc->imagesArray = array('house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg','house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg', 'house.jpg'); 
 
