@@ -1,0 +1,27 @@
+<offer id="107" type="vendor.model" cbid="25" available="true">
+    <url>http://best.seller.ru/product_page.asp?pid=12344</url>
+    <price>55</price>
+    <currencyId>USD</currencyId>
+    <categoryId>35</categoryId>
+    <picture>http://best.seller.ru/img/img12344.jpg</picture>
+    <pickup>true</pickup> 
+    <store>false</store> 
+    <delivery>false</delivery>   
+    <typePrefix>Наушники</typePrefix>
+    <vendor>SONY</vendor>
+    <model>MDR-CD480</model>
+    <description>Отличные наушники для плеера и компьютера.</description>
+</offer><offer id="107" type="vendor.model" cbid="25" available="true">
+    <url>http://best.seller.ru/product_page.asp?pid=12344</url>
+    <price>55</price>
+    <currencyId>USD</currencyId>
+    <categoryId>35</categoryId>
+    <picture>http://best.seller.ru/img/img12344.jpg</picture>
+    <pickup>true</pickup> 
+    <store>false</store> 
+    <delivery>false</delivery>   
+    <typePrefix>Наушники</typePrefix>
+    <vendor>SONY</vendor>
+    <model>MDR-CD480</model>
+    <description>Отличные наушники для плеера и компьютера.</description>
+</offer>
