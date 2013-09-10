@@ -35,3 +35,14 @@ apt-get update
 apt-get install php5-xsl 
 http://stackoverflow.com/questions/1151528/ubuntu-error-installing-php5-xsl-package
 http://aofa.cs.princeton.edu/lectures/lectures13/AA07-Perms.pdf
+
+
+http://forum.ru-board.com/itstarz/
+Можно получить призы! 
+Проявите свои навыки и выиграйте отличные призы:
+
+                - именные сертификаты;
+                - планшетники iPad или камеры Go Pro;
+                - главный приз - поездка в Грецию.
+
+        Бонусный промокод только для подписчиков Ru-Board: itstarz2013-05ruboard
