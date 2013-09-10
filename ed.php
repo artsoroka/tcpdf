@@ -13,3 +13,25 @@ http://www.cappuccino-project.org/
 
 http://stackoverflow.com/questions/1078729/how-to-calculate-the-height-of-a-multicell-writehtmlcell-in-tcpdfhttp://stackoverflow.com/questions/1078729/how-to-calculate-the-height-of-a-multicell-writehtmlcell-in-tcpdf
 http://habrahabr.ru/post/77364/
+http://stackoverflow.com/questions/7474354/include-jquery-in-the-javascript-console
+
+Coursera 
+http://learn-android.appspot.com/preview
+https://www.coursera.org/course/android
+https://www.coursera.org/course/pkuic 
+http://shop.oreilly.com/product/0636920028857.do 
+https://github.com/funjs/book-source)
+http://animuchan.net/c/thread2095/
+http://betv.com.ua/
+
+
+UNIX
+http://linux.101hacks.com/unix/head/
+http://ken.edmonds-commerce.co.uk/ubuntu/extract-sql-gz-file-on-command-line/
+
+PHP 
+Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-xsl_5.3. 
+apt-get update 
+apt-get install php5-xsl 
+http://stackoverflow.com/questions/1151528/ubuntu-error-installing-php5-xsl-package
+http://aofa.cs.princeton.edu/lectures/lectures13/AA07-Perms.pdf
