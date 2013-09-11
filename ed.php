@@ -25,6 +25,10 @@ http://animuchan.net/c/thread2095/
 http://betv.com.ua/
 
 
+http://thecodeil.com/5min_challenge_ru.html
+http://stackoverflow.com/questions/376338/what-are-the-common-undefined-behaviours-that-java-programmers-should-know-about
+http://stackoverflow.com/questions/367633/what-are-all-the-common-undefined-behaviour-that-a-c-programmer-should-know-ab/11211519#11211519
+
 UNIX
 http://linux.101hacks.com/unix/head/
 http://ken.edmonds-commerce.co.uk/ubuntu/extract-sql-gz-file-on-command-line/
