@@ -23,11 +23,12 @@ http://shop.oreilly.com/product/0636920028857.do
 https://github.com/funjs/book-source)
 http://animuchan.net/c/thread2095/
 http://betv.com.ua/
-
+http://www.growing-object-oriented-software.com/index.html 
 
 http://thecodeil.com/5min_challenge_ru.html
 http://stackoverflow.com/questions/376338/what-are-the-common-undefined-behaviours-that-java-programmers-should-know-about
 http://stackoverflow.com/questions/367633/what-are-all-the-common-undefined-behaviour-that-a-c-programmer-should-know-ab/11211519#11211519
+http://rutracker.org/forum/viewtopic.php?t=2317009
 
 UNIX
 http://linux.101hacks.com/unix/head/
