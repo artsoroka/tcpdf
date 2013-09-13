@@ -22,6 +22,52 @@ class Product
 
 	include SERIALIZE
 
+
+##############
+	attr_accessor :full_text 
+	attr_accessor :price 
+
+	def initialize 
+		@images = []
+	end
+
+	def images
+		@images 
+	end 
+
+
+	def get_details
+
+		doc 		= Nokogiri::HTML(open("http://elitehifi.spb.ru#{@link}"))
+		info_block 	= doc.search('.product-info-td')[1]
+
+		begin
+			
+			@full_text = info_block.children.first.text
+			@price	  = doc.search('.product-price').first.text 
+			
+		rescue Exception => e
+			
+		end
+
+		begin
+				
+			images	 		  = doc.search('.fancybox')
+
+			images.each do |image|
+				entry = {
+					"small_image" => image.children.first['src'],
+					"big_image"   => image['href']
+				}
+
+				@images.push(entry)
+			end 			
+		rescue Exception => e
+			
+		end
+
+	end
+############# 
 end
 
 result = []
@@ -70,9 +116,9 @@ class Products
 
 end
 
-products = Products.new("http://elitehifi.spb.ru/katalog/resivery_av/", "?p=")
+#products = Products.new("http://elitehifi.spb.ru/katalog/resivery_av/", "?p=")
 
-products.list.each do |product|
-	puts product.to_json + "\n"
-end 
+#products.list.each do |product|
+#	puts product.to_json + "\n"
+#end 
 

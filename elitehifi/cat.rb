@@ -63,12 +63,12 @@ class CategoryParser
 	end
 
 end
+################
+#result = CategoryParser.new.ls_categories 
 
-result = CategoryParser.new.ls_categories 
-
-result.each do |cat| 
-	puts cat.to_json + "\n" 
-end 
+#result.each do |cat| 
+#	puts cat.to_json + "\n" 
+#end 
 
 
 #	products = Products.new 
