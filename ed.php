@@ -29,10 +29,24 @@ http://thecodeil.com/5min_challenge_ru.html
 http://stackoverflow.com/questions/376338/what-are-the-common-undefined-behaviours-that-java-programmers-should-know-about
 http://stackoverflow.com/questions/367633/what-are-all-the-common-undefined-behaviour-that-a-c-programmer-should-know-ab/11211519#11211519
 http://rutracker.org/forum/viewtopic.php?t=2317009
+https://code.google.com/p/jslibs/wiki/JavascriptTips
+http://pocs.epfl.ch/syllabus
+http://moocs.epfl.ch/page-92640-en.html
+http://people.epfl.ch/katerina.argyraki 
+
 
 UNIX
 http://linux.101hacks.com/unix/head/
 http://ken.edmonds-commerce.co.uk/ubuntu/extract-sql-gz-file-on-command-line/
+
+RUBY 
+
+http://jrubytips.com/posts/8-use-java-s-concurrency-library-instead-of-ruby-s-thread
+https://github.com/jruby/jruby/wiki/Concurrency-in-jruby 
+http://stackoverflow.com/questions/8246848/multiple-nokogiri-requests-at-once
+http://habrahabr.ru/post/180741 
+http://stackoverflow.com/questions/7911669/create-file-in-ruby 
+
 
 PHP 
 Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-xsl_5.3. 
