@@ -33,7 +33,7 @@ https://code.google.com/p/jslibs/wiki/JavascriptTips
 http://pocs.epfl.ch/syllabus
 http://moocs.epfl.ch/page-92640-en.html
 http://people.epfl.ch/katerina.argyraki 
-
+https://github.com/rvagg/levelmeup 
 
 UNIX
 http://linux.101hacks.com/unix/head/
@@ -46,7 +46,7 @@ https://github.com/jruby/jruby/wiki/Concurrency-in-jruby
 http://stackoverflow.com/questions/8246848/multiple-nokogiri-requests-at-once
 http://habrahabr.ru/post/180741 
 http://stackoverflow.com/questions/7911669/create-file-in-ruby 
-
+http://stackoverflow.com/questions/12974917/get-the-width-and-height-of-an-image-without-downloading-it
 
 PHP 
 Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-xsl_5.3. 
