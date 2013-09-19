@@ -6,27 +6,37 @@ class DBvfsFiles
 
 	def initialize 
 		@last_inserted_id
-		@fileId = 1
-		@folderId = 2
+		@fileId = 17
+		@folderId = 3
 		@folder_path = '201309' 
 		@data = []
 		@query = "INSERT INTO `vfsFiles` (`fileId`, `folderId`, `title`, `path`, `params`, `isFavorite`, `mimeType`, `fileSize`, `fileExists`, `statusId`, `createdAt`) VALUES "
 
 	end
 
-	def insert(image)
+	def insert(image = false)
 
-		self.get_remote_image image
+		if image 
 
-		params = self.image_size 
-		mime_type = self.mime_type 
-		
-		entry = "\n(#{@fileId}, #{@folderId}, '#{@file_title}', '#{@path}', '#{params}', NULL, '#{mime_type}', #{@file_size}, 1, 1, #{Time.now.to_s.split(' +').first})"
-		
-		@data.push entry
-		@last_inserted_id = @fileId
-		@fileId += 1 
-		@data.length
+			self.get_remote_image image
+
+			params = self.image_size 
+			mime_type = self.mime_type 
+			
+			entry = "\n(#{@fileId}, #{@folderId}, '#{@file_title}', '#{@path}', '#{params}', NULL, '#{mime_type}', #{@file_size}, 1, 1, '#{Time.now.to_s.split(' +').first}')"
+			
+			@data.push entry
+			@last_inserted_id = @fileId
+			@fileId += 1 
+			# @data.length correct if fileId starts with 1
+			@last_inserted_id 
+			
+		else 
+
+			return 'NULL'
+
+		end 
+
 	end
 
 	def last_inserted_id
@@ -77,4 +87,6 @@ end
 
 # vfsFiles = DBvfsFiles.new 
 # puts vfsFiles.insert('/images/cms/data/catalog/products/Clearaudio_SmartMatrix.jpg')
+# puts vfsFiles.insert('/images/cms/data/catalog/products/Clearaudio_SmartMatrix.jpg')
+
 # vfsFiles.save_to_file('vfs.sql')

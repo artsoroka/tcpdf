@@ -55,6 +55,7 @@ apt-get install php5-xsl
 http://stackoverflow.com/questions/1151528/ubuntu-error-installing-php5-xsl-package
 http://aofa.cs.princeton.edu/lectures/lectures13/AA07-Perms.pdf
 
+ALGORITHM=UNDEFINED DEFINER=`20k`@`localhost` SQL SECURITY DEFINER  
 
 http://forum.ru-board.com/itstarz/
 Можно получить призы! 
