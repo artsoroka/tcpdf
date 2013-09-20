@@ -35,9 +35,18 @@ http://moocs.epfl.ch/page-92640-en.html
 http://people.epfl.ch/katerina.argyraki 
 https://github.com/rvagg/levelmeup 
 
+http://tox.im 
+
+skype://nerdy_gnu 
+
 UNIX
 http://linux.101hacks.com/unix/head/
 http://ken.edmonds-commerce.co.uk/ubuntu/extract-sql-gz-file-on-command-line/
+
+
+SQL 
+http://stackoverflow.com/questions/2300396/force-drop-mysql-bypassing-foreign-key-constraint 
+
 
 RUBY 
 
