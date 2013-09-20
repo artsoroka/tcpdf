@@ -44,11 +44,28 @@ class Product
 
 		begin
 			
-			@full_text = info_block.children.first.text
+			#@full_text = info_block.children.first.text
+			#@full_text = info_block.text
+			
+			# FRIDAY UPDATES
+			
+			@full_text = ""
+			
+			0.upto(info_block.children.length - 1) do |i| 
+				entry = info_block.children[i]
+				@full_text += entry.text unless entry.attributes['class'] && entry.attributes['class'].value == 'product-price'
+			end
+			
+			########
+
+
+
 			@price	  = doc.search('.product-price').first.text 
 			
 		rescue Exception => e
-			
+			puts "Something gone wrong while parsing .product-info-td \n"
+			puts e
+
 		end
 
 		begin

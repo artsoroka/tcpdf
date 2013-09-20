@@ -5,8 +5,8 @@ class DBcategories
 		@sql_query = "INSERT INTO  `categories` (`categoryId`, `title`, `alias`, `foreword`, `content`, `orderNumber`, `parentCategoryId`, `statusId`) VALUES "
 	end
 
-	def insert category 
-		entry = "\n(#{@categoryId}, '#{category.text}', '#{category.link.split('/').last}', 'foreword', '', NULL, NULL, 1) "
+	def insert(category, parent_category = 'NULL') 
+		entry = "\n(#{@categoryId}, '#{category.text}', '#{category.link.split('/').last}', 'foreword', '', NULL, #{parent_category}, 1) "
 		@data.push entry 
 		@last_inserted_id, @categoryId = @categoryId, @categoryId + 1
 

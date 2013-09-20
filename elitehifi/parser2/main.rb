@@ -25,30 +25,21 @@ CategoryParser.new.ls_categories.each do |category|
 		puts "Adding #{product.title} to products table \n"
 		dbproducts.insert product
 
-		if counter > 5
-			puts "Saving products.sql "
-			dbproducts.save_to_file './sql/products.sql'
-
-			puts "Saving VFS.sql "
-			dbVfsFiles.save_to_file './sql/vfs.sql'
-			
-			puts "Saving categories.sql "
-			dbcategories.save_to_file './sql/categories.sql'
-			
-			Kernel.exit 
-		end
-		#counter += 1 
 	end 
+	counter += 1
+
+
+	puts "Saving products.sql "
+	dbproducts.save_to_file './sql/products.sql'
+
+	puts "Saving VFS.sql "
+	dbVfsFiles.save_to_file './sql/vfs.sql'
+				
+	puts "Saving categories.sql "
+	dbcategories.save_to_file './sql/categories.sql'
+
+
 
 end
 
-			puts "Saving products.sql "
-			dbproducts.save_to_file './sql/products.sql'
-
-			puts "Saving VFS.sql "
-			dbVfsFiles.save_to_file './sql/vfs.sql'
-			
-			puts "Saving categories.sql "
-			dbcategories.save_to_file './sql/categories.sql'
- 
 
