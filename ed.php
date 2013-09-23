@@ -39,6 +39,10 @@ http://tox.im
 
 skype://nerdy_gnu 
 
+http://pchiusano.blogspot.nl/2013/09/actors-are-overly-nondeterminstic.html 
+http://mandubian.com/2013/09/22/play-actor-room/     
+http://jeeconf.com/materials/orm-and-ui-for-corporate-apps/
+
 UNIX
 http://linux.101hacks.com/unix/head/
 http://ken.edmonds-commerce.co.uk/ubuntu/extract-sql-gz-file-on-command-line/
@@ -56,6 +60,7 @@ http://stackoverflow.com/questions/8246848/multiple-nokogiri-requests-at-once
 http://habrahabr.ru/post/180741 
 http://stackoverflow.com/questions/7911669/create-file-in-ruby 
 http://stackoverflow.com/questions/12974917/get-the-width-and-height-of-an-image-without-downloading-it
+http://invisibleblocks.com/2007/06/11/rubys-other-ternary-operator/
 
 PHP 
 Failed to fetch http://security.ubuntu.com/ubuntu/pool/main/p/php5/php5-xsl_5.3. 
