@@ -4,10 +4,13 @@ require './dbproducts.rb'
 require './vfsfiles.rb'
 require './dbcategories.rb' 
 require './brands.rb'
+require './dbimageobject.rb' 
+
 
 dbVfsFiles = DBvfsFiles.new 
+dbObjectImages = DBobjectImages.new 
 dbcategories = DBcategories.new 
-dbproducts = DBproducts.new(dbVfsFiles)   
+dbproducts = DBproducts.new(dbVfsFiles, dbObjectImages)    
 
 
 class SubCat
@@ -18,13 +21,17 @@ end
 counter = 0
 CategoryParser.new.ls_categories.each do |category| 
 
-	puts "Starting category #{category.text}" 
+	if counter < 2 
+
+
+
+		puts "Starting category #{category.text}" 
 	
-	catId = dbcategories.insert category 
+		catId = dbcategories.insert category 
 
-	brands = Brands.new category 
+		brands = Brands.new category 
 
-	brands.list.each do |brand|
+		brands.list.each do |brand|
 
 		puts "Begin parsing sub category #{brand['name']} \n"
 
@@ -32,9 +39,11 @@ CategoryParser.new.ls_categories.each do |category|
 		subcat.text = brand['name']
 		subcat.link = brand['link']
 
-		subcatId = dbcategories.insert(subcat, catId)  
+		#subcatId = dbcategories.insert(subcat, category)  
 
-		dbproducts.set_category_id subcatId 	
+		#dbproducts.set_category_id subcatId 	
+		dbproducts.set_category_id catId 	
+		dbproducts.set_prefix category.link.split('/').last
 
 		products = Products.new("http://elitehifi.spb.ru#{subcat.link}")
 
@@ -46,7 +55,13 @@ CategoryParser.new.ls_categories.each do |category|
 		end 
 
 	end
-	
+
+
+
+	end 
+
+	counter += 1
+
 end
 
 
@@ -59,3 +74,6 @@ end
 	puts "Saving categories.sql "
 	dbcategories.save_to_file './sql/categories.sql'
 
+
+	puts "Saving objectImages.sql "
+	dbObjectImages.save_to_file './sql/objectImages.sql'
