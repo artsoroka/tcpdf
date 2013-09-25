@@ -43,6 +43,9 @@ http://pchiusano.blogspot.nl/2013/09/actors-are-overly-nondeterminstic.html
 http://mandubian.com/2013/09/22/play-actor-room/     
 http://jeeconf.com/materials/orm-and-ui-for-corporate-apps/
 
+FP Complete 
+
+
 UNIX
 http://linux.101hacks.com/unix/head/
 http://ken.edmonds-commerce.co.uk/ubuntu/extract-sql-gz-file-on-command-line/
@@ -50,7 +53,7 @@ http://ken.edmonds-commerce.co.uk/ubuntu/extract-sql-gz-file-on-command-line/
 
 SQL 
 http://stackoverflow.com/questions/2300396/force-drop-mysql-bypassing-foreign-key-constraint 
-
+http://www.boyter.org/2011/01/mysql-command-line-import-utf-8/ 
 
 RUBY 
 
