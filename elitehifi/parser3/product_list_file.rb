@@ -49,16 +49,74 @@ class Product
 			
 			# FRIDAY UPDATES
 			
-			@full_text = ""
+			#@full_text = ""
 			
-			0.upto(info_block.children.length - 1) do |i| 
-				entry = info_block.children[i]
-				@full_text += entry.text unless entry.attributes['class'] && entry.attributes['class'].value == 'product-price'
-			end
+			#0.upto(info_block.children.length - 1) do |i| 
+			#	entry = info_block.children[i]
+				#@full_text += entry.text unless entry.attributes['class'] && entry.attributes['class'].value == 'product-price'
+			#	@full_text += entry.to_s unless entry.attributes['class'] && entry.attributes['class'].value == 'product-price'
+			#end
 			
 			########
 
 
+
+			# Thursday 
+
+
+			@full_text = "" 
+
+			info_block.children.to_a.each do |element|
+				@full_text += element.to_s.gsub("'", '"') if element.attributes.empty?  
+			
+				if element['class'] == 'product-chatacteristics' 
+							
+						spec_list = []
+
+						element.children.each_with_index do |spec, index|
+							spec = spec.to_s 
+
+							spec.gsub!('<dt>', '<td class="fade">')
+							spec.gsub!('</dt>', '</td>') 
+							spec.gsub!('<dd>', '<td>') 
+							spec.gsub!('</dd>', '</td>') 
+							
+							spec_list.push spec if index.even?  
+
+						end 
+
+						result = ""
+						spec_list.each_with_index do |e, index|
+							result += e.prepend("<tr>") if index.even? 
+							result += e << "</tr>" if index.odd? 
+						end
+
+						result .prepend('<table class="table"><tbody><tr><th colspan="2">Характеристики</th></tr>')
+						result  << "</tbody></table>"
+						
+						@full_text += result 
+
+				end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			end 
+
+
+
+
+			#
 
 			@price	  = doc.search('.product-price').first.text 
 			

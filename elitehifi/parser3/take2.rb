@@ -1,3 +1,5 @@
+# encoding: UTF-8 
+
 require './cat.rb' 
 require './product_list_file.rb'
 require './dbproducts.rb'
@@ -21,7 +23,7 @@ end
 counter = 0
 CategoryParser.new.ls_categories.each do |category| 
 
-	if counter > 9 && counter < 11 
+	if counter < 100 
 
 
 
